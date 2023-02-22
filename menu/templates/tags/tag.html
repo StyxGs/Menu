@@ -1,0 +1,11 @@
+<li><a href="{% url 'menu:category' category.slug %}">{{ category.name }}</a></li>
+{% for ch in category.children.get_queryset %}
+    {% if category.children %}
+        <ul>
+            {% with category=ch template_name="tags/tag.html" %}
+                {% include template_name %}
+            {% endwith %}
+        </ul>
+    {% endif %}
+{% endfor %}
+

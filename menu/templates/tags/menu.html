@@ -1,0 +1,8 @@
+{% load main_menu %}
+<ul>
+    {% for category in categories %}
+        {% if not category.parent %}
+            {% include 'tags/tag.html' %}
+        {% endif %}
+    {% endfor %}
+</ul>
