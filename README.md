@@ -2,6 +2,7 @@
 
 <h3>Инструкция по установке</h3>
 <ol>
+<li>Установить зависимости: pip install -r requirements.txt</li>
 <li>Сохранить миграции: python manage.py makemigrations</li>
 <li>Выполнить миграции: python manage.py migrate</li>
 <li>Создать суперпользователя: python manage.py createsuperuser</li>
